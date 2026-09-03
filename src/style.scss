@@ -1,0 +1,114 @@
+/**
+ * Front-end + editor styles (compiled to build/style-index.css and
+ * loaded on both the editor and the front end).
+ */
+
+.wp-block-jdyach-testimonial-card {
+	position: relative;
+	margin: 0;
+	padding: 2rem;
+	border-radius: 12px;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+	&__quote {
+		margin: 0 0 1.5rem;
+		font-size: 1.15rem;
+		line-height: 1.6;
+
+		&::before {
+			content: "\201C";
+			display: block;
+			font-size: 2.5rem;
+			line-height: 1;
+			font-family: Georgia, "Times New Roman", serif;
+			opacity: 0.25;
+			margin-bottom: 0.25rem;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		gap: 0.9rem;
+	}
+
+	&__avatar {
+		flex: 0 0 auto;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		overflow: hidden;
+		background: rgba(0, 0, 0, 0.06);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+	}
+
+	&__avatar--button {
+		padding: 0;
+		border: 0;
+		cursor: pointer;
+		font: inherit;
+		color: inherit;
+	}
+
+	&__avatar-placeholder {
+		font-size: 0.65rem;
+		text-align: center;
+		line-height: 1.2;
+		padding: 0 4px;
+		opacity: 0.6;
+	}
+
+	&__byline {
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+	}
+
+	&__author-name {
+		font-style: normal;
+		font-weight: 600;
+	}
+
+	&__author-title {
+		font-size: 0.85rem;
+		opacity: 0.65;
+	}
+
+	&__rating {
+		display: flex;
+		gap: 2px;
+		margin-top: 0.2rem;
+		color: #e8a33d;
+	}
+
+	&__star {
+		display: block;
+	}
+
+	&__star-button {
+		padding: 0 !important;
+		height: auto !important;
+		min-width: 0 !important;
+		color: inherit !important;
+	}
+
+	// "Minimal" block style: no card chrome, just the content.
+	&.is-style-minimal {
+		padding: 0;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
+	}
+}

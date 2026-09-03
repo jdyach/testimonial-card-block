@@ -1,0 +1,97 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "jdyach/testimonial-card",
+  "version": "1.0.0",
+  "title": "Testimonial Card",
+  "category": "widgets",
+  "icon": "format-quote",
+  "description": "A customer quote with an avatar, byline, and star rating, saved as a self-contained card.",
+  "keywords": [
+    "testimonial",
+    "review",
+    "quote",
+    "card"
+  ],
+  "textdomain": "testimonial-card-block",
+  "attributes": {
+    "quote": {
+      "type": "rich-text",
+      "source": "rich-text",
+      "selector": ".wp-block-jdyach-testimonial-card__quote",
+      "role": "content"
+    },
+    "authorName": {
+      "type": "rich-text",
+      "source": "rich-text",
+      "selector": ".wp-block-jdyach-testimonial-card__author-name",
+      "role": "content"
+    },
+    "authorTitle": {
+      "type": "rich-text",
+      "source": "rich-text",
+      "selector": ".wp-block-jdyach-testimonial-card__author-title",
+      "role": "content"
+    },
+    "avatarUrl": {
+      "type": "string",
+      "source": "attribute",
+      "selector": ".wp-block-jdyach-testimonial-card__avatar img",
+      "attribute": "src",
+      "default": ""
+    },
+    "avatarAlt": {
+      "type": "string",
+      "source": "attribute",
+      "selector": ".wp-block-jdyach-testimonial-card__avatar img",
+      "attribute": "alt",
+      "default": ""
+    },
+    "avatarId": {
+      "type": "number",
+      "default": 0
+    },
+    "rating": {
+      "type": "number",
+      "default": 5
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide"
+    ],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "border": {
+      "radius": true,
+      "color": true,
+      "width": true
+    },
+    "color": {
+      "background": true,
+      "text": true,
+      "link": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    }
+  },
+  "styles": [
+    {
+      "name": "card",
+      "label": "Card",
+      "isDefault": true
+    },
+    {
+      "name": "minimal",
+      "label": "Minimal"
+    }
+  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
