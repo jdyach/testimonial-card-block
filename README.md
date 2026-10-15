@@ -2,6 +2,10 @@
 
 A custom WordPress plugin adding one block, **Testimonial Card**: a customer quote with an avatar, byline, and star rating, displayed as a styled card.
 
+[![Try it live in WordPress Playground](https://img.shields.io/badge/Try%20it%20live-WordPress%20Playground-3858e9?logo=wordpress&logoColor=white&style=for-the-badge)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/jdyach/testimonial-card-block/main/_playground/blueprint.json)
+
+The live demo runs a real WordPress site in your browser (with the [Fieldnote](https://github.com/jdyach/fieldnote) block theme and sample content) and opens straight into the block editor, so you can edit a card, change the rating, swap the avatar or switch styles. Nothing to install.
+
 This is a companion piece to [Recent Posts Grid](https://github.com/jdyach/recent-posts-grid-block), a dynamic (PHP-rendered) block. This one is deliberately the other kind — a **static** block, so together the two repos cover both major block-rendering approaches in WordPress.
 
 ## What it demonstrates
@@ -27,7 +31,9 @@ testimonial-card-block/
 │   ├── editor.scss                # Editor-only styles
 │   └── style.scss                # Front-end + editor styles, incl. the Minimal style
 ├── build/                        # Compiled output (checked in so the plugin runs as-is)
-├── .github/workflows/ci.yml      # Build + PHP lint on every push
+├── .github/workflows/ci.yml      # Build, CSS lint, coding standards + PHP lint on every push
+├── _playground/                  # WordPress Playground demo: blueprint.json + seed.php
+├── bin/build-blueprint.js        # Rebuilds blueprint.json from seed.php (npm run blueprint)
 ├── .phpcs.xml.dist               # WordPress Coding Standards config
 └── readme.txt                    # WordPress.org-style plugin readme
 ```
