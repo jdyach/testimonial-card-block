@@ -2,7 +2,7 @@
 	"name": "testimonial-card-block",
 	"version": "1.0.0",
 	"description": "A custom Gutenberg block for displaying a customer testimonial or review as a styled card, with a quote, avatar, author byline, and star rating.",
-	"author": "Jacqui",
+	"author": "Jacqui Dyach",
 	"license": "GPL-2.0-or-later",
 	"private": true,
 	"scripts": {
